@@ -1,15 +1,21 @@
 ```
 void setup(){
   size(800,300);
-  textSize(150);
+  textSize(80);
 }
-int i, a=1;
+int i, dir=1, sp=1;
 void draw(){
-  background(150,45,255);
-  if(keyPressed)
-    a = key-'0';
-  text("Graphics", i=i+a, 200);
-  if(i>800) i=0;
+  fill(0);
+  background(150,0,255);
+  fill(100,250,0);
+  
+  text("Graphics", i, 200);
+  if(i>width-500) dir=-1;
+  if(i<0) dir=1;
+  i = i+dir*sp;
+}
+void KeyPressed(){
+  sp = key - '0';
 }
 ```
 # 배너 완성!
