@@ -1,0 +1,23 @@
+```
+PFont f;
+void setup(){
+  size(900,300);
+  textSize(80);
+  f = createFont("굴림",64);
+  textFont(f);
+}
+int i, dir=1, sp=1;
+void draw(){
+  fill(0);
+  background(0,0,255);
+  fill(0,255,0);
+  
+  text("안동대 컴공 사랑합니다", i, 200);
+  if(i>width-750) dir=-1;
+  if(i<0) dir=1;
+  i = i+dir*sp;
+}
+void KeyPressed(){
+  sp = key - '0';
+}
+```
